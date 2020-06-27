@@ -12,9 +12,23 @@ namespace Product
         {
 
             string name;
-            int quantity;
+            float quantity;
             string units;
             float price;
+
+            Console.WriteLine("Название продукта:"); name = Console.ReadLine().Trim().ToUpper();
+            Console.WriteLine("Количество продукта:"); quantity = float.Parse(Console.ReadLine().Replace(",", "."));
+            Console.WriteLine("Единицы измерения:"); units = Console.ReadLine().Trim().ToLower();
+            Console.WriteLine("Цена продукта:"); price = float.Parse(Console.ReadLine().Replace(",", "."));
+
+            Console.Clear();
+
+            Console.WriteLine($"Название продукта: {name}");
+            Console.WriteLine($"Количество продукта: {quantity}");
+            Console.WriteLine($"Единицы измерения: {units}");
+            Console.WriteLine($"Цена продукта: {price}");
+
+            Console.ReadLine();
         }
     }
 }
